@@ -17,7 +17,7 @@ var obj = {
 };
 
 advice(obj).around('hello', function (orig, name) {
-    return orig() + '!';
+    return orig(name) + '!';
 });
 
 obj.hello('World'); // => 'Hello World!'
