@@ -1,0 +1,16 @@
+{
+    "name": "advice",
+    "version": "0.1.0",
+    "description": "Augment an object by adding functionality before, after or around a method",
+
+    "dependencies": {
+        "component/bind": "*",
+        "component/each": "*"
+    },
+
+    "development": {
+        "component/assert": "*"
+    },
+
+    "scripts": ["index.js"]
+}
