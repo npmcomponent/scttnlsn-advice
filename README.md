@@ -11,16 +11,16 @@ Augment an object by adding functionality before, after or around a method.  Bas
 
 ```js
 var obj = {
-    hello: function () {
-        return 'Hello';
+    hello: function (name) {
+        return 'Hello ' + name;
     }
 };
 
-advice(obj).around('hello', function (orig) {
-    return orig() + ' World';
+advice(obj).around('hello', function (orig, name) {
+    return orig() + '!';
 });
 
-obj.hello(); // => 'Hello World'
+obj.hello('World'); // => 'Hello World!'
 ```
 
 ## API
@@ -30,7 +30,7 @@ obj.hello(); // => 'Hello World'
 Replaces the given method with a new function that calls `fn` before the original.
 
 ```js
-advice(obj).before('hello', function () {
+advice(obj).before('hello', function (name) {
     ...
 });
 ```
@@ -40,7 +40,7 @@ advice(obj).before('hello', function () {
 Replaces the given method with a new function that calls `fn` after the original.
 
 ```js
-advice(obj).after('hello', function () {
+advice(obj).after('hello', function (name) {
     ...
 });
 ```
@@ -50,7 +50,7 @@ advice(obj).after('hello', function () {
 Replaces the given method with a new function that calls `fn`.  `fn` can optionally call the original.
 
 ```js
-advice(obj).around('hello', function (orig) {
+advice(obj).around('hello', function (orig, name) {
     ...
 });
 ```
