@@ -6,7 +6,7 @@ module.exports = function (obj) {
         around: function (base, wrapped) {
             return function () {
                 var args = [].slice.call(arguments);
-                return wrapped.apply(obj, [bind(obj, base)].concat(args));
+                return wrapped.apply(this, [bind(this, base)].concat(args));
             };
         },
 
