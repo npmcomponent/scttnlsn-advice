@@ -1,5 +1,5 @@
-var bind = require('bind');
-var each = require('each');
+var bind = require('component-bind');
+var each = require('component-each');
 
 module.exports = function (obj) {
     var advice = {

@@ -1,0 +1,9 @@
+{
+  "name": "scttnlsn-advice",
+  "description": "Augment an object by adding functionality before, after or around a method",
+  "version": "0.1.1",
+  "dependencies": {
+    "component-bind": "git://github.com/npmcomponent/component-bind.git",
+    "component-each": "git://github.com/npmcomponent/component-each.git"
+  }
+}
